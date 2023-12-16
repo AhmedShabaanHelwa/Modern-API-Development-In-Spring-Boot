@@ -84,7 +84,7 @@ public class RestAPIException {
                                                           Locale locale) {
         ex.printStackTrace(); // TODO: Should be kept only for development
         Error error = ErrorUtils
-                .createError(null,
+                .createError(ErrorCode.JSON_PARSE_ERROR.getErrorMessageKey(),
                         ErrorCode.JSON_PARSE_ERROR.getErrorCode(),
                         HttpStatus.NOT_ACCEPTABLE.value()).setUrl(request.getRequestURL().toString())
                 .setRequestMethod(request.getMethod());
